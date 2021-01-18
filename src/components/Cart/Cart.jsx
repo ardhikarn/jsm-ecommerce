@@ -50,6 +50,7 @@ const Cart = ({ cart, onUpdateCartQty, onRemoveFromCart, onEmptyCart }) => {
           </Button>
           <Button
             className={classes.checkoutButton}
+            component={Link}
             to="/checkout"
             size="large"
             type="button"
