@@ -20,16 +20,16 @@ const Product = ({ product }) => {
     <Card className={classes.root}>
       <CardMedia
         className={classes.media}
-        image={product.image}
+        image={product.media.source}
         title={product.name}
       />
       <CardContent>
         <div className={classes.cardContent}>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography gutterBottom variant="h5">
             {product.name}
           </Typography>
-          <Typography gutterBottom variant="h5" component="h2">
-            ${product.price}
+          <Typography variant="h5">
+            {product.price.formatted_with_symbol}
           </Typography>
         </div>
         <Typography

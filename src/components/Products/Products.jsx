@@ -4,26 +4,7 @@ import { Grid } from "@material-ui/core";
 import Product from "./Product/Product";
 import useStyles from "./styles";
 
-const products = [
-  {
-    id: 1,
-    name: "shoes",
-    price: "5",
-    image:
-      "https://assetscdn1.paytm.com/images/catalog/product/F/FO/FOOCASTOES-BLACA-J-114927393A2EB8A/1581336357230_0..jpg",
-    description: "Running Shoes",
-  },
-  {
-    id: 2,
-    name: "Macbook",
-    price: "15",
-    image:
-      "https://www.metrodataonline.com/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/m/v/mvfj2id2.jpg",
-    description: "Apple Macbook",
-  },
-];
-
-const Products = () => {
+const Products = ({ products }) => {
   const classes = useStyles();
   return (
     <main className={classes.content}>
