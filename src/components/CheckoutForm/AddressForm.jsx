@@ -35,6 +35,7 @@ const AddressForm = ({ checkoutToken, next }) => {
 
   useEffect(() => {
     fetchShippingCountries(checkoutToken.id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -44,6 +45,7 @@ const AddressForm = ({ checkoutToken, next }) => {
   useEffect(() => {
     if (shippingSubdivision)
       fetchShippingOptions(checkoutToken.id, shippingCountry, shippingSubdivision);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [shippingSubdivision]);
 
   const countries = Object.entries(shippingCountries).map(([code, name]) => ({ id: code, label: name, }));

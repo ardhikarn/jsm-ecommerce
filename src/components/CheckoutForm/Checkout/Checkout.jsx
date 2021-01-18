@@ -39,6 +39,7 @@ const Checkout = ({ cart, onCaptureCheckout, order, error }) => {
       };
       generateToken();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cart]);
 
   const nextStep = () => setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -61,10 +62,10 @@ const Checkout = ({ cart, onCaptureCheckout, order, error }) => {
       <Button component={Link} variant="outlined" type="button" to="/">Back to home</Button>
     </>
   ) : (
-    <div className={classes.spinner}>
-      <CircularProgress />
-    </div>
-  ));
+      <div className={classes.spinner}>
+        <CircularProgress />
+      </div>
+    ));
   if (error) {
     Confirmation = () => (
       <>
